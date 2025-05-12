@@ -29,16 +29,25 @@ public class twelvemay {
         }
         return x;
     }
+    public int smallestEvenMultiple(int n) {
+        if(n%2 == 0){
+            return n;
+        }else{
+            return 2 * n;
+        }
+    }
     public static void main(String[] args) {
         twelvemay obj = new twelvemay(); // create object
         double[] result = obj.convertTemperature(36.5);
         int cf = obj.commonFactors(4,10);
         String[] operations = {"++X", "X++", "--X", "X++"};
         int fval = obj.finalValueAfterOperations(operations);
+        int smallmult = obj.smallestEvenMultiple(55);
 
         System.out.println("Kelvin: " + result[0]);
         System.out.println("Fahrenheit: " + result[1]);
         System.out.println("common factors: " + cf);
         System.out.println("Final value after operations: " + fval);
+        System.out.println("smallest even multiple: " + smallmult);
     }
 }
