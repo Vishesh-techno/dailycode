@@ -8,12 +8,37 @@ public class twelvemay {
         answer[1] = fahrenheit;
         return answer;
     }
-
+    public int commonFactors(int a, int b) {
+        int count = 0;
+        int min = Math.min(a, b);
+        for (int i = 1; i <= min; i++) {
+            if (a % i == 0 && b % i == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+    public int finalValueAfterOperations(String[] operations) {
+        int x = 0;
+        for(String op : operations){
+            if(op.contains("++")){
+                x++;
+            }else{
+                x--;
+            }
+        }
+        return x;
+    }
     public static void main(String[] args) {
         twelvemay obj = new twelvemay(); // create object
         double[] result = obj.convertTemperature(36.5);
+        int cf = obj.commonFactors(4,10);
+        String[] operations = {"++X", "X++", "--X", "X++"};
+        int fval = obj.finalValueAfterOperations(operations);
 
         System.out.println("Kelvin: " + result[0]);
         System.out.println("Fahrenheit: " + result[1]);
+        System.out.println("common factors: " + cf);
+        System.out.println("Final value after operations: " + fval);
     }
 }
