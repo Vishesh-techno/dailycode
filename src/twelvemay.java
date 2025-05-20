@@ -39,16 +39,16 @@ public class twelvemay {
             return 2 * n;
         }
     }
-//    1486. XOR Operation in an Array
+//    XOR Operation in an Array
 //    n is a size of array
 //    start is a starting index
-//    public int xorOperation(int n, int start) {
-//        int xor = 0;
-//        for (int i = 0; i < n; i++) {
-//            xor ^= start + 2 * i;
-//        }
-//        return xor;
-//    }
+    public int xorOperation(int n, int start) {
+        int xor = 0;
+        for (int i = 0; i < n; i++) {
+            xor ^= start + 2 * i;
+        }
+        return xor;
+    }
     public static void main(String[] args) {
         twelvemay obj = new twelvemay(); // create object
         double[] result = obj.convertTemperature(36.5);
