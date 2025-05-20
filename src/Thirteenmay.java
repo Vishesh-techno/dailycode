@@ -88,6 +88,17 @@ public class Thirteenmay {
         }
         System.out.println();
 
+//        FLOYD'S Triangle pattern
+        int s = 1;
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(s);
+                s++;
+            }
+            System.out.println();
+        }
+        System.out.println();
+
     }
 
 }
