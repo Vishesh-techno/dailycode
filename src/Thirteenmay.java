@@ -98,6 +98,7 @@ public class Thirteenmay {
             System.out.println();
         }
         System.out.println();
+
 //        0-1 Triangle pattern
         for (int i = 1; i <= 5; i++) {
             for (int j = 1; j <= i; j++) {
@@ -106,6 +107,35 @@ public class Thirteenmay {
                 }else {
                     System.out.print("0");
                 }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+//        BUTTERFLY pattern
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            for (int l = 1; l <= 2*(5-i); l++) {
+                System.out.print(" ");
+            }
+
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = 5; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            for (int l = 1; l <= 2*(5-i); l++) {
+                System.out.print(" ");
+            }
+
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
             }
             System.out.println();
         }
