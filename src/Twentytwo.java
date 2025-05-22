@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Twentytwo {
     public static void main(String[] args) {
 //        Sum of first n natural numbers
@@ -55,5 +57,27 @@ public class Twentytwo {
         }
         System.out.println("Sum of even digits: " + evensum);
         System.out.println("Sum of odd digits: " + oddsum);
+
+//        Write a program to find the factorial of any number entered by the user
+        int fact = 1;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter an integer: ");
+        int n3 = sc.nextInt();
+        for (int i4 = 1; i4 <= n3; i4++) {
+            fact = i4 * fact;
+        }
+        System.out.println("Fact is: " + fact);
+        System.out.print("Do you want to continue? Press 1 for yes or 0 for no");
+        if (sc.nextInt() == 1) {
+            int fact1 = 1;
+            System.out.println("Enter an integer: ");
+            int n4 = sc.nextInt();
+            for (int i5 = 1; i5 <= n4; i5++) {
+                fact1 = i5 * fact1;
+            }
+            System.out.println("Fact is: " + fact1);
+        }else {
+            System.out.println();
+        }
     }
 }
