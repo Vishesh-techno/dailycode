@@ -1,6 +1,19 @@
 import java.util.Scanner;
 
 public class Twentytwo {
+    //    Write a Java method to compute the average of three numbers
+    public static int avgnum(int a, int b, int c) {
+        int avg = (a + b + c) / 3;
+        return avg;
+    }
+
+    //    Write a method named isEven that accepts an int argument. The method
+//    should return true if the argument is even, or false otherwise. Also write a program to test your method.
+    public static boolean isEven(int a1) {
+        return (a1 % 2 == 0);
+    }
+//Write a Java program to check if a number is a palindrome in Java?
+
     public static void main(String[] args) {
 //        Sum of first n natural numbers
         int n = 100;
@@ -69,13 +82,13 @@ public class Twentytwo {
         System.out.println("Fact is: " + fact);
         System.out.print("Do you want to continue? Press 1 for yes or 0 for no: ");
         while (sc.nextInt() == 1) {
-                int fact1 = 1;
-                System.out.println("Enter an integer: ");
-                int n4 = sc.nextInt();
-                for (int i5 = 1; i5 <= n4; i5++) {
-                    fact1 = i5 * fact1;
-                }
-                System.out.println("Fact is: " + fact1);
+            int fact1 = 1;
+            System.out.println("Enter an integer: ");
+            int n4 = sc.nextInt();
+            for (int i5 = 1; i5 <= n4; i5++) {
+                fact1 = i5 * fact1;
+            }
+            System.out.println("Fact is: " + fact1);
             System.out.print("Do you want to continue? Press 1 for yes or 0 for no: ");
         }
 //        Write a program to print the multiplication table of a number N, entered by the user.
@@ -83,8 +96,24 @@ public class Twentytwo {
         int n5 = sc.nextInt();
         for (int i5 = 1; i5 <= 10; i5++) {
             int table = n5 * i5;
-            System.out.println(n5 + "X" +  i5 + " = " + table );
+            System.out.println(n5 + "X" + i5 + " = " + table);
         }
         System.out.println();
+
+//        for(int i6 = 0; i6 <= 5; i6++ ) {
+//            System.out.println("i = " + i6 );
+//        }System.out.println("i after the loop = " + i );
+//      Write a Java method to compute the average of three numbers
+        System.out.println("enter the number of a , b, and c");
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        int z = sc.nextInt();
+        System.out.println("the avg is: " + avgnum(x, y, z));
+
+        //    Write a method named isEven that accepts an int argument. The method
+//    should return true if the argument is even, or false otherwise. Also write a program to test your method.
+        System.out.println("enter the number: ");
+        int x1 = sc.nextInt();
+        System.out.println("even: " + isEven(x1));
     }
 }
