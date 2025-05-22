@@ -16,6 +16,12 @@ public class Twentytwo {
             }
             System.out.println();
         }
-
+//     print reverse of a number
+        int n1 = 10899;
+        while (n1 > 0) {
+            int rem = n1 % 10;
+            System.out.print(rem);
+            n1 /= 10;
+        }
     }
 }
