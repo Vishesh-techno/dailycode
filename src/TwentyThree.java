@@ -11,6 +11,19 @@ public class TwentyThree {
         System.out.print("Element not found ");
         return -1;
     }
+    public static int largestaray(int[] numbers) {
+        int largest = Integer.MIN_VALUE;
+        int smallest = Integer.MAX_VALUE;
+        for (int i = 1; i < numbers.length; i++) {
+            if(largest < numbers[i]){
+                largest = numbers[i];
+            }else if (smallest > numbers[i]){
+                smallest = numbers[i];
+                System.out.println("the smallest number is " + smallest);
+            }
+        }
+        return largest;
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -23,6 +36,8 @@ public class TwentyThree {
             System.out.print("Do you want to continue? Press 1 for yes or 0 for no: ");
             choice = sc.nextInt();
         }while (choice == 1) ;
+
+        System.out.println("The largest number in the array is " + largestaray(numbers));
         System.out.println("Program ended.");
     }
 }
