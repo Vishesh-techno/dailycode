@@ -64,6 +64,7 @@ public class TwentyThree {
             System.out.println();
         }
     }
+
     public static void PairsubArray(int[] numbers) {
         int ts = 0;
         for (int i = 0; i < numbers.length; i++) {
@@ -71,7 +72,7 @@ public class TwentyThree {
             for (int j = i + 1; j < numbers.length; j++) {
                 int end = j;
                 for (int k = start; k < end; k++) {
-                    System.out.print("(" + numbers[k] + ")" );
+                    System.out.print("(" + numbers[k] + ")");
                     ts++;
                 }
                 System.out.println();
@@ -82,12 +83,12 @@ public class TwentyThree {
     }
 
     public static void bubbleSort(int[] numbers) {
-        for(int i = 0; i < numbers.length-1; i++){
-            for(int j = 0; j < numbers.length-i-1; j++){
-                if(numbers[j] > numbers[j+1]){
+        for (int i = 0; i < numbers.length - 1; i++) {
+            for (int j = 0; j < numbers.length - i - 1; j++) {
+                if (numbers[j] > numbers[j + 1]) {
                     int temp = numbers[j];
-                    numbers[j] = numbers[j+1];
-                    numbers[j+1] = temp;
+                    numbers[j] = numbers[j + 1];
+                    numbers[j + 1] = temp;
                 }
                 System.out.println();
             }
@@ -117,14 +118,14 @@ public class TwentyThree {
         } while (choice2 == 1);
         ReverseArray(numbers);
         for (int i = 0; i < numbers.length; i++) {
-            System.out.print(numbers[i]+ " ");
+            System.out.print(numbers[i] + " ");
         }
         System.out.println();
         PairsArray(numbers);
         PairsubArray(numbers);
         bubbleSort(numbers);
         for (int i = 0; i < numbers.length; i++) {
-            System.out.print(numbers[i]+ " ");
+            System.out.print(numbers[i] + " ");
         }
         System.out.println("Program ended.");
 
