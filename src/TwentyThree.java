@@ -127,7 +127,14 @@ public class TwentyThree {
         for (int i = 0; i < numbers.length; i++) {
             System.out.print(numbers[i] + " ");
         }
+        int[] numbers2 = {3,6,2,1,8,7,4,5,3,1};
+        bubbleSort(numbers2);
+        for (int i = 0; i < numbers2.length; i++) {
+            System.out.print(numbers2[i] + " ");
+        }
+        System.out.println();
         System.out.println("Program ended.");
+
 
     }
 }
