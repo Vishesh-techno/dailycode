@@ -24,6 +24,22 @@ public class TwentyThree {
         }
         return largest;
     }
+    public static int BinarySearch(int[] numbers, int key) {
+        int start = 0;
+        int end = numbers.length;
+        int mid;
+        while (start <= end){
+            mid = (start+end)/2;
+            if (numbers[mid] ==key){
+                return mid;
+            }else if (numbers[mid] < key){
+                start = mid+1;
+            }else {
+                end = mid-1;
+            }
+        }
+        return -1;
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -36,8 +52,15 @@ public class TwentyThree {
             System.out.print("Do you want to continue? Press 1 for yes or 0 for no: ");
             choice = sc.nextInt();
         }while (choice == 1) ;
-
         System.out.println("The largest number in the array is " + largestaray(numbers));
+        int choice2;
+        do {
+            System.out.print("Enter the number to be searched: ");
+            int key1 = sc.nextInt();
+            System.out.println("the key found at index: " + BinarySearch(numbers, key1));
+            System.out.print("Do you want to continue? Press 1 for yes or 0 for no: ");
+            choice2 = sc.nextInt();
+        }while (choice2 == 1) ;
         System.out.println("Program ended.");
     }
 }
