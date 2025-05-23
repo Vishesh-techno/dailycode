@@ -81,6 +81,19 @@ public class TwentyThree {
         System.out.println("The pairs array contains " + ts + " elements");
     }
 
+    public static void bubbleSort(int[] numbers) {
+        for(int i = 0; i < numbers.length-1; i++){
+            for(int j = 0; j < numbers.length-i-1; j++){
+                if(numbers[j] > numbers[j+1]){
+                    int temp = numbers[j];
+                    numbers[j] = numbers[j+1];
+                    numbers[j+1] = temp;
+                }
+                System.out.println();
+            }
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] numbers = {2, 4, 6, 8, 10, 20, 40, 50};
@@ -106,8 +119,13 @@ public class TwentyThree {
         for (int i = 0; i < numbers.length; i++) {
             System.out.print(numbers[i]+ " ");
         }
+        System.out.println();
         PairsArray(numbers);
         PairsubArray(numbers);
+        bubbleSort(numbers);
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i]+ " ");
+        }
         System.out.println("Program ended.");
 
     }
