@@ -64,6 +64,22 @@ public class TwentyThree {
             System.out.println();
         }
     }
+    public static void PairsubArray(int[] numbers) {
+        int ts = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            int start = i;
+            for (int j = i + 1; j < numbers.length; j++) {
+                int end = j;
+                for (int k = start; k < end; k++) {
+                    System.out.print("(" + numbers[k] + ")" );
+                    ts++;
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+        System.out.println("The pairs array contains " + ts + " elements");
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -91,6 +107,7 @@ public class TwentyThree {
             System.out.print(numbers[i]+ " ");
         }
         PairsArray(numbers);
+        PairsubArray(numbers);
         System.out.println("Program ended.");
 
     }
