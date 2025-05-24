@@ -95,6 +95,24 @@ public class TwentyThree {
         }
     }
 
+    public static void maxSumArray(int[] numbers) {
+        int currsum = 0;
+        int maxsum = Integer.MIN_VALUE;
+        for (int i = 0; i < numbers.length - 1; i++) {
+            for (int j = i; j < numbers.length; j++) {
+                currsum = 0;
+                for (int k = i; k < j; k++) {
+                    currsum = currsum + numbers[k];
+                }
+                if (maxsum < currsum) {
+                    maxsum = currsum;
+                }
+            }
+        }
+        System.out.println("max sum is " + maxsum);
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] numbers = {2, 4, 6, 8, 10, 20, 40, 50};
@@ -127,11 +145,13 @@ public class TwentyThree {
         for (int i = 0; i < numbers.length; i++) {
             System.out.print(numbers[i] + " ");
         }
-        int[] numbers2 = {3,6,2,1,8,7,4,5,3,1};
+        int[] numbers2 = {3, 6, 2, 1, 8, 7, 4, 5, 3, 1};
         bubbleSort(numbers2);
         for (int i = 0; i < numbers2.length; i++) {
             System.out.print(numbers2[i] + " ");
         }
+        System.out.println();
+        maxSumArray(numbers);
         System.out.println();
         System.out.println("Program ended.");
 
