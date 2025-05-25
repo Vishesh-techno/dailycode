@@ -49,6 +49,20 @@ public class TwentyFiveMay {
             end--;
         }
     }
+    public static int maxProfit(int[] prices) {
+        int min = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < min) {
+                min = prices[i];
+            } else {
+                maxProfit = Math.max(maxProfit, prices[i] - min);
+            }
+        }
+
+        return maxProfit;
+    }
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         int m = 5;
@@ -56,5 +70,6 @@ public class TwentyFiveMay {
         System.out.println("Index of " + m + ": " + search(arr, m));
         nextPermutation(arr);
         System.out.println("Next Permutation: " + Arrays.toString(arr));
+        System.out.println("Max Difference: " + maxProfit(arr));
     }
 }
