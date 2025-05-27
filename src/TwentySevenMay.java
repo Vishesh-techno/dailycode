@@ -69,6 +69,16 @@ public class TwentySevenMay {
         }
         return nums[left];
     }
+    public static boolean pairSum(int[] nums,int target ) {
+        for(int i = 0; i<nums.length; i++){
+            for(int j = i+1; j<nums.length; j++){
+                if(nums[i]+nums[j] == target){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4, -4, 3, 5};
@@ -77,5 +87,6 @@ public class TwentySevenMay {
         System.out.println("The max product of sub array is: " + maxSubArrayProduct(nums));
         System.out.println("The min of array is: " + findMin(nums));
         System.out.println("The min of array is by optimal approach: " + findminoptimal(num));
+        System.out.println("the sum of pairs of target is: " + pairSum(nums,4));
     }
 }
