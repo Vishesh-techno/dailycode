@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class TwentySevenMay {
     public static int maxSubArraysum(int[] nums) {
         int product = 1;
@@ -104,7 +106,19 @@ public class TwentySevenMay {
         }
         return false;
     }
-
+    public static int[] threeSum(int[] nums) {
+        int n = nums.length;
+        for (int i = 0; i < n - 2; i++) {
+            for (int j = i + 1; j < n - 1; j++) {
+                for (int k = j + 1; k < n; k++) {
+                    if (nums[i] + nums[j] + nums[k] == 0) {
+                        return new int[] {i, j, k};
+                    }
+                }
+            }
+        }
+        return new int[0];
+    }
     public static void main(String[] args) {
         int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4, -4, 3, 5};
         int[] num = {4,5,6,-2,-1,2,3};
@@ -114,5 +128,6 @@ public class TwentySevenMay {
         System.out.println("The min of array is by optimal approach: " + findminoptimal(num));
         System.out.println("the sum of pairs of target is: " + pairSum(nums,4));
         System.out.println("the sum of pairs of target is: " + pairSumRotated(num,15));
+        System.out.println("the sum of three pairs is: " + Arrays.toString(threeSum(nums)));
     }
 }
