@@ -79,14 +79,40 @@ public class TwentySevenMay {
         }
         return false;
     }
+    public static boolean pairSumRotated(int[] nums,int target ) {
+        int pivot = -1;
+        int n = nums.length;
+        for(int i = 0; i<nums.length-1; i++){
+            if(nums[i]>nums[i+1]){
+                pivot = i;
+                break;
+            }
+        }
+        int left = (pivot + 1) % n;
+        int right = pivot;
+
+        while(left!=right){
+            int sum = nums[left] + nums[right];
+            
+            if(sum == target){
+                return true;
+            } else if (sum<target) {
+                left = (left + 1) % n;
+            }else {
+                right = (n+right-1)%n;
+            }
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4, -4, 3, 5};
-        int[] num = {4,5,6,-1,2,3};
+        int[] num = {4,5,6,-2,-1,2,3};
         System.out.println("The max sum of sub array is: " + maxSubArraysum(nums));
         System.out.println("The max product of sub array is: " + maxSubArrayProduct(nums));
         System.out.println("The min of array is: " + findMin(nums));
         System.out.println("The min of array is by optimal approach: " + findminoptimal(num));
         System.out.println("the sum of pairs of target is: " + pairSum(nums,4));
+        System.out.println("the sum of pairs of target is: " + pairSumRotated(num,15));
     }
 }
