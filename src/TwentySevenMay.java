@@ -48,10 +48,20 @@ public class TwentySevenMay {
         }
         return maxp;
     }
+    public static int findMin(int[] nums) {
+        int minElement = Integer.MAX_VALUE;
+        for(int i = 0; i<nums.length; i++){
+            if(nums[i] < minElement){
+                minElement = nums[i];
+            }
+        }
+        return minElement;
+    }
 
     public static void main(String[] args) {
         int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4, -4, 3, 5};
         System.out.println("The max sum of sub array is: " + maxSubArraysum(nums));
         System.out.println("The max product of sub array is: " + maxSubArrayProduct(nums));
+        System.out.println("The min of array is: " + findMin(nums));
     }
 }
