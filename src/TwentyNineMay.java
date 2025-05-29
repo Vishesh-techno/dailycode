@@ -1,12 +1,14 @@
+import java.util.Arrays;
+
 public class TwentyNineMay {
-    public static int minandmax(int[] nums){
+    public static int minandmax(int[] nums) {
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
-        for(int i=0; i<nums.length; i++){
-            if(nums[i] < min){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < min) {
                 min = nums[i];
             }
-            if(nums[i] > max){
+            if (nums[i] > max) {
                 max = nums[i];
             }
         }
@@ -16,9 +18,23 @@ public class TwentyNineMay {
         return max;
     }
 
+    public static void reverse(int[] num) {
+        int start = 0;
+        int end = num.length - 1;
+        while (start < end) {
+            int temp = num[start];
+            num[start] = num[end];
+            num[end] = temp;
+            start++;
+            end--;
+        }
+        System.out.println(Arrays.toString(num));
+    }
+
 
     public static void main(String[] args) {
-        int[] no = {1,2,3,5,6,7,89,5,2,2,6,3,4,-85, };
+        int[] no = {1, 2, 3, 5, 6, 7, 89, 5, 2, 2, 6, 3, 4, -85,};
         minandmax(no);
+        reverse(no);
     }
 }
