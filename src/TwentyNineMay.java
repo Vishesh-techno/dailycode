@@ -47,6 +47,26 @@ public class TwentyNineMay {
         }
         return ms;
     }
+    public static Boolean duplicateElement(int[] nums){
+        for(int i =0; i<nums.length-1; i++){
+            for(int j =i+1; i<nums.length; i++){
+                if(nums[i] == nums[j]){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static Boolean dupElement(int[] nums){
+        int left = 0, right = nums.length;
+        while(left != right){
+            return true;
+//            left++;
+//            right--;
+        }
+        return false;
+    }
 
 
 
@@ -55,5 +75,7 @@ public class TwentyNineMay {
         minandmax(no);
         reverse(no);
         System.out.println(maxsSubArray(no));
+        System.out.println(duplicateElement(no));
+        System.out.println(dupElement(no));
     }
 }
