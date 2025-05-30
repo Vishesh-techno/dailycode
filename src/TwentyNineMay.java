@@ -60,13 +60,19 @@ public class TwentyNineMay {
 
     public static Boolean dupElement(int[] nums){
         int left = 0, right = nums.length;
-        while(left != right){
+        while(left == right){
             return true;
 //            left++;
 //            right--;
         }
         return false;
     }
+
+//    public static int choclateDistributionProb(int[] nums){
+//        Arrays.sort(nums);
+//        int left = 0;
+//        int right = nums.length - 1;
+//    }
 
 
 
