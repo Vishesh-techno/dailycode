@@ -31,7 +31,6 @@ public class ThirtyMay {
         return max;
     }
 
-
     public static void main(String[] args) {
         int[] nums = {2,4,5,5,6,78,6,5,6,5,-5,-6,415,0,45};
         System.out.println(minandmax(nums));
