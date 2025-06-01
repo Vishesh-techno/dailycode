@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class ArrayListExample {
     public static void main(String[] args) {
+//        2D Array by ArrayList
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
 //        list.add(1);
